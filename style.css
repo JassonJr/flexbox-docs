@@ -3,8 +3,98 @@
     --primary-color: #A7D129;
     --secondary-color: #616F39;
     --third-color: #3E432E;
-    --fourth-color: #262b23;
-    justify-content:
+    --fourth-color: #1d1f1c;
+    --background-color: #0a0a0a;
     /* typography */
-    --primary-font: ;
+    --title-font: Helvetica, sans-serif;
+    --text-font: monospace;
+
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6, summary {
+    font-family: var(--title-font);
+}
+
+p {
+    font-family: var(--text-font);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+
+    text-transform: uppercase;
+    font-size: 28pt;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.container {
+    background-color: var(--fourth-color);
+    color: #A7D129;
+
+    margin: 0 1.2rem;
+    padding: 1rem 1.1rem;
+}
+
+summary {
+    font-size: 22pt;
+}
+.property {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem 0;
+    padding: 1.5rem 2rem;
+}
+
+.property h2 {
+    font-size: 18pt;
+}
+
+.property p {
+    font-size: 14pt;
+}
+
+.examples p{
+    font-size: 18pt;
+}
+
+.item {
+    background-color: var(--third-color);
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    gap: 2rem 2rem;
+
+    padding: 1.2rem;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
 }

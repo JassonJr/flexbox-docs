@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1 class="logo">Flex Guide</h1>
     </header>
     <section class="container">
@@ -24,9 +24,11 @@
                 </code>
                 <h3>Exemplos:</h3>
                 <div class="examples">
-                    <div class="item">1</div>
-                    <div class="item">2</div>
-                    <div class="item">3</div>
+                    <div class="flex">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                    </div>
                 </div>
             </section>
             <section class="property">
@@ -40,25 +42,39 @@
                 <h3>Exemplos:</h3>
                 <div class="examples">
                     <p>row (padrão)</p>
-                    <div class="row">
+                    <div class="flex row">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                        <div class="item">6</div>
+                        <div class="item">7</div>
+                        <div class="item">8</div>
+                        <div class="item">9</div>
+                        <div class="item">10</div>
                     </div>
                     <p>row-reverse </p>
-                    <div class="row-reverse">
+                    <div class="flex row-reverse">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                        <div class="item">6</div>
+                        <div class="item">7</div>
+                        <div class="item">8</div>
+                        <div class="item">9</div>
+                        <div class="item">10</div>
                     </div>
                     <p>column</p>
-                    <div class="column">
+                    <div class="flex column">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>column-reverse</p>
-                    <div class="column-reverse">
+                    <div class="flex column-reverse">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
@@ -76,19 +92,26 @@
                 <h3>Exemplos:</h3>
                 <div class="examples">
                     <p>nowrap (padrão)</p>
-                    <div class="nowrap">
+                    <div class="flex nowrap">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                        <div class="item">6</div>
+                        <div class="item">7</div>
+                        <div class="item">8</div>
+                        <div class="item">9</div>
+                        <div class="item">10</div>
                     </div>
                     <p>wrap </p>
-                    <div class="wrap">
+                    <div class="flex wrap">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>wrap-reverse</p>
-                    <div class="wrap-reverse">
+                    <div class="flex wrap-reverse">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
@@ -105,7 +128,7 @@
                 </code>
                 <h3>Exemplo:</h3>
                 <div class="examples">
-                    <div class="flex-flow">
+                    <div class="flex flex-flow">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
@@ -123,37 +146,37 @@
                 <h3>Exemplos:</h3>
                 <div class="examples">
                     <p>flex-start (padrão)</p>
-                    <div class="flex-start">
+                    <div class="flex flex-start">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>flex-end </p>
-                    <div class="flex-end">
+                    <div class="flex flex-end">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>center</p>
-                    <div class="center">
+                    <div class="flex center">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>space-between</p>
-                    <div class="space-between">
+                    <div class="flex space-between">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>space-around</p>
-                    <div class="space-around">
+                    <div class="flex space-around">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>space-evenly</p>
-                    <div class="space-evenly">
+                    <div class="flex space-evenly">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
@@ -171,31 +194,31 @@
                 <h3>Exemplos:</h3>
                 <div class="examples">
                     <p>flex-start (padrão)</p>
-                    <div class="flex-start">
+                    <div class="flex flex-start">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>flex-end</p>
-                    <div class="flex-end">
+                    <div class="flex flex-end">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>center</p>
-                    <div class="center">
+                    <div class="flex center">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>stretch</p>
-                    <div class="stretch">
+                    <div class="flex stretch">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>baseline</p>
-                    <div class="baseline">
+                    <div class="flex baseline">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
@@ -213,37 +236,37 @@
                 <h3>Exemplos:</h3>
                 <div class="examples">
                     <p>flex-start (padrão)</p>
-                    <div class="flex-start">
+                    <div class="flex flex-start">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>flex-end</p>
-                    <div class="flex-end">
+                    <div class="flex flex-end">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>center</p>
-                    <div class="center">
+                    <div class="flex center">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>stretch</p>
-                    <div class="stretch">
+                    <div class="flex stretch">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>space-between</p>
-                    <div class="baseline">
+                    <div class="flex baseline">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>space-around</p>
-                    <div class="baseline">
+                    <div class="flex baseline">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
@@ -265,19 +288,19 @@
                 <h3>Exemplos:</h3>
                 <div class="examples">
                     <p>gap</p>
-                    <div class="gap">
+                    <div class="flex gap">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>row-gap</p>
-                    <div class="row-gap">
+                    <div class="flex row-gap">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>columns-gap</p>
-                    <div class="column-gap">
+                    <div class="flex column-gap">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
