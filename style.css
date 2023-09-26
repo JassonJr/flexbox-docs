@@ -8,7 +8,7 @@
     /* typography */
     --title-font: Helvetica, sans-serif;
     --text-font: monospace;
-
+     font-size: 16px;
 }
 
 body {
@@ -65,12 +65,18 @@ summary {
     font-size: 18pt;
 }
 
+.item:nth-of-type(odd) {
+    height: 50px;
+}
+.item:nth-child(even) {
+    height: 70px;
+}
+
 .item {
     background-color: var(--third-color);
 
     width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,11 +84,18 @@ summary {
 
 .flex {
     display: flex;
-    gap: 2rem 2rem;
+    /* gap: 2rem 2rem; */
 
-    padding: 1.2rem;
+    /* padding: 2rem; */
+    margin: 1rem;
+    padding: 1rem;
+    height: 20rem;
+    width: 30rem;
+
+    border: 2px solid var(--primary-color);
 }
 
+/* direction */
 .row {
     flex-direction: row;
 }
@@ -97,4 +110,83 @@ summary {
 
 .column-reverse {
     flex-direction: column-reverse;
+}
+
+/* wrap */
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+/* flow */
+.flex-flow {
+    flex-flow: column wrap;
+}
+
+/* justify-content */
+.justify-flex-start {
+    justify-content: flex-start;
+}
+
+.justify-flex-end {
+    justify-content: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+.justify-space-between {
+    justify-content: space-between;
+}
+.justify-space-around {
+    justify-content: space-around;
+}
+.justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+/* align-items */
+.align-items-flex-start {
+    align-items: flex-start;
+}
+.align-items-flex-end {
+    align-items: flex-end;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-items-stretch {
+    align-items: stretch;
+}
+.align-items-baseline {
+    align-items: baseline;
+}
+
+/* align-content */
+.align-content-flex-start {
+    align-content: flex-start;
+}
+
+.align-content-flex-end {
+    align-content: flex-end;
+}
+
+.align-content-center {
+    align-content: center;
+}
+.align-content-stetch {
+    align-content: stretch;
+}
+.align-content-space-between {
+    align-content: space-between;
+}
+.align-content-space-around {
+    align-content: space-around;
 }

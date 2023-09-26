@@ -17,11 +17,11 @@
             <section class="property">
                 <h2>display</h2>
                 <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
-                <code>
+                <pre>
                     .container {
                         display: flex;
                     }
-                </code>
+                </pre>
                 <h3>Exemplos:</h3>
                 <div class="examples">
                     <div class="flex">
@@ -34,11 +34,11 @@
             <section class="property">
                 <h2>flex-direction</h2>
                 <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
-                <code>
+                <pre>
                     .container {
                         flex-direction: row | row-reverse | column | column-reverse;
                     }
-                </code>
+                </pre>
                 <h3>Exemplos:</h3>
                 <div class="examples">
                     <p>row (padrão)</p>
@@ -84,11 +84,11 @@
             <section class="property">
                 <h2>flex-wrap</h2>
                 <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
-                <code>
+                <pre>
                     .container {
                         flex-wrap: nowrap | wrap | wrap-reverse;
                     }
-                </code>
+                </pre>
                 <h3>Exemplos:</h3>
                 <div class="examples">
                     <p>nowrap (padrão)</p>
@@ -109,74 +109,96 @@
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                        <div class="item">6</div>
+                        <div class="item">7</div>
+                        <div class="item">8</div>
+                        <div class="item">9</div>
+                        <div class="item">10</div>
                     </div>
                     <p>wrap-reverse</p>
                     <div class="flex wrap-reverse">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                        <div class="item">6</div>
+                        <div class="item">7</div>
+                        <div class="item">8</div>
+                        <div class="item">9</div>
+                        <div class="item">10</div>
                     </div>
                 </div>
             </section>
             <section class="property">
                 <h2>flex-flow</h2>
                 <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
-                <code>
+                <pre>
                     .container {
                         flex-flow: column wrap;
                     }
-                </code>
+                </pre>
                 <h3>Exemplo:</h3>
                 <div class="examples">
                     <div class="flex flex-flow">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                        <div class="item">6</div>
+                        <div class="item">7</div>
+                        <div class="item">8</div>
+                        <div class="item">9</div>
+                        <div class="item">10</div>
                     </div>
                 </div>
             </section>
             <section class="property">
                 <h2>justify-content</h2>
                 <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
-                <code>
+                <pre>
                     .container {
                         justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
                     }
-                </code>
+                </pre>
                 <h3>Exemplos:</h3>
                 <div class="examples">
                     <p>flex-start (padrão)</p>
-                    <div class="flex flex-start">
+                    <div class="flex justify-flex-start">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
+                        
                     </div>
                     <p>flex-end </p>
-                    <div class="flex flex-end">
+                    <div class="flex justify-flex-end">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>center</p>
-                    <div class="flex center">
+                    <div class="flex justify-center">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>space-between</p>
-                    <div class="flex space-between">
+                    <div class="flex justify-space-between">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>space-around</p>
-                    <div class="flex space-around">
+                    <div class="flex justify-space-around">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>space-evenly</p>
-                    <div class="flex space-evenly">
+                    <div class="flex justify-space-evenly">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
@@ -186,39 +208,39 @@
             <section class="property">
                 <h2>align-items</h2>
                 <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
-                <code>
+                <pre>
                     .container {
                         align-items: flex-start | flex-end | center | stretch | baseline;
                     }
-                </code>
+                </pre>
                 <h3>Exemplos:</h3>
                 <div class="examples">
                     <p>flex-start (padrão)</p>
-                    <div class="flex flex-start">
+                    <div class="flex align-items-flex-start">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>flex-end</p>
-                    <div class="flex flex-end">
+                    <div class="flex align-items-flex-end">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>center</p>
-                    <div class="flex center">
+                    <div class="flex align-items-center">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>stretch</p>
-                    <div class="flex stretch">
+                    <div class="flex align-items-stretch">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>baseline</p>
-                    <div class="flex baseline">
+                    <div class="flex align-items-baseline">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
@@ -228,45 +250,45 @@
             <section class="property">
                 <h2>align-content</h2>
                 <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
-                <code>
+                <pre>
                     .container {
                         align-content: flex-start | flex-end | center | stretch | space-between | space-around;
                     }
-                </code>
+                </pre>
                 <h3>Exemplos:</h3>
                 <div class="examples">
                     <p>flex-start (padrão)</p>
-                    <div class="flex flex-start">
+                    <div class="flex align-content-flex-start">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>flex-end</p>
-                    <div class="flex flex-end">
+                    <div class="flex align-content-flex-end">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>center</p>
-                    <div class="flex center">
+                    <div class="flex align-content-center">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>stretch</p>
-                    <div class="flex stretch">
+                    <div class="flex align-content-stretch">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>space-between</p>
-                    <div class="flex baseline">
+                    <div class="flex align-content-space-between">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                     <p>space-around</p>
-                    <div class="flex baseline">
+                    <div class="flex align-content-space-around">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
@@ -277,14 +299,14 @@
             <section class="property">
                 <h2>align-content</h2>
                 <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
-                <code>
+                <pre>
                     .container {
                         gap: 10px;
                         gap: 10px 20px;
                         row-gap: 10px;
                         column-gap: 20px;
                     }
-                </code>
+                </pre>
                 <h3>Exemplos:</h3>
                 <div class="examples">
                     <p>gap</p>
