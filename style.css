@@ -190,3 +190,17 @@ summary {
 .align-content-space-around {
     align-content: space-around;
 }
+/* gap */
+.gap {
+    flex-wrap: wrap;
+    gap: 5px 20px;
+}
+
+.row-gap {
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.column-gap {
+    column-gap: 20px;
+}

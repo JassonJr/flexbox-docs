@@ -33,7 +33,7 @@
             </section>
             <section class="property">
                 <h2>flex-direction</h2>
-                <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
+                <p>Essa propriedade estabelece o eixo-principal, assim, definindo a direção em que os itens flex do container estarão posicionados.</p>
                 <pre>
                     .container {
                         flex-direction: row | row-reverse | column | column-reverse;
@@ -52,7 +52,7 @@
                         <div class="item">7</div>
                         <div class="item">8</div>
                         <div class="item">9</div>
-                        <div class="item">10</div>
+                        <div class="item" >10</div>
                     </div>
                     <p>row-reverse </p>
                     <div class="flex row-reverse">
@@ -83,7 +83,7 @@
             </section>
             <section class="property">
                 <h2>flex-wrap</h2>
-                <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
+                <p>Por padrão, itens flex vão tentar se encaixar em uma linha. Você pode alterar isso para permitir que os itens sejam "envolvidos" por esta propriedade conforme a necessidade.</p>
                 <pre>
                     .container {
                         flex-wrap: nowrap | wrap | wrap-reverse;
@@ -134,7 +134,7 @@
             </section>
             <section class="property">
                 <h2>flex-flow</h2>
-                <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
+                <p>Este é um atalho/abreviação para o flex-direction e o flex-wrap, que juntos definem os eixos do container. O valor padrão é row nowrap.</p>
                 <pre>
                     .container {
                         flex-flow: column wrap;
@@ -158,7 +158,7 @@
             </section>
             <section class="property">
                 <h2>justify-content</h2>
-                <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
+                <p>Esta propriedade define o alinhamento no eixo horizontal. Isto ajuda a distribuir espaço livre de sobra quando os itens numa linha são inflexíveis, ou são flexíveis mas alcançaram seu tamanho máximo. Também excerce um controle sobre o alinhamento quando os itens transbordam a linha.</p>
                 <pre>
                     .container {
                         justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
@@ -207,7 +207,7 @@
             </section>
             <section class="property">
                 <h2>align-items</h2>
-                <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
+                <p>Isto define o comportamento de como os itens serão distribuidos em paralelo ao eixo vertical na linha atual.</p>
                 <pre>
                     .container {
                         align-items: flex-start | flex-end | center | stretch | baseline;
@@ -249,7 +249,7 @@
             </section>
             <section class="property">
                 <h2>align-content</h2>
-                <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
+                <p></p>
                 <pre>
                     .container {
                         align-content: flex-start | flex-end | center | stretch | space-between | space-around;
@@ -297,7 +297,7 @@
             </section>
             <!-- gap,row-gap, column-gap -->
             <section class="property">
-                <h2>align-content</h2>
+                <h2>gap</h2>
                 <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
                 <pre>
                     .container {
@@ -314,6 +314,13 @@
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                        <div class="item">6</div>
+                        <div class="item">7</div>
+                        <div class="item">8</div>
+                        <div class="item">9</div>
+                        <div class="item">10</div>
                     </div>
                     <p>row-gap</p>
                     <div class="flex row-gap">
