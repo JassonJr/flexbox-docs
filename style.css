@@ -61,10 +61,17 @@ summary {
     font-size: 14pt;
 }
 
+.examples { 
+    display: flex;
+    flex-direction: column;
+}
 .examples p{
     font-size: 18pt;
 }
 
+.center {
+    align-self: center;
+}
 .item:nth-of-type(odd) {
     height: 50px;
 }
@@ -95,107 +102,11 @@ summary {
     border: 2px solid var(--primary-color);
 }
 
-/* direction */
-.row {
-    flex-direction: row;
-}
-
-.row-reverse {
-    flex-direction: row-reverse;
-}
-
-.column {
-    flex-direction: column;
-}
-
-.column-reverse {
-    flex-direction: column-reverse;
-}
-
-/* wrap */
-.nowrap {
-    flex-wrap: nowrap;
-}
-
-.wrap {
-    flex-wrap: wrap;
-}
-
-.wrap-reverse {
-    flex-wrap: wrap-reverse;
-}
-
-/* flow */
+/* flex-flow */
 .flex-flow {
-    flex-flow: column wrap;
-}
-
-/* justify-content */
-.justify-flex-start {
-    justify-content: flex-start;
-}
-
-.justify-flex-end {
-    justify-content: flex-end;
-}
-
-.justify-center {
-    justify-content: center;
-}
-.justify-space-between {
-    justify-content: space-between;
-}
-.justify-space-around {
-    justify-content: space-around;
-}
-.justify-space-evenly {
-    justify-content: space-evenly;
-}
-
-/* align-items */
-.align-items-flex-start {
-    align-items: flex-start;
-}
-.align-items-flex-end {
-    align-items: flex-end;
-}
-.align-items-center {
-    align-items: center;
-}
-.align-items-stretch {
-    align-items: stretch;
-}
-.align-items-baseline {
-    align-items: baseline;
-}
-
-/* align-content */
-.align-content-flex-start {
-    align-content: flex-start;
-}
-
-.align-content-flex-end {
-    align-content: flex-end;
-}
-
-.align-content-center {
-    align-content: center;
-}
-.align-content-stetch {
-    align-content: stretch;
-}
-.align-content-space-between {
-    align-content: space-between;
-}
-.align-content-space-around {
-    align-content: space-around;
+    flex-flow: row wrap-reverse;
 }
 /* gap */
-.gap {
-    flex-wrap: wrap;
-    gap: 5px 20px;
-}
-
 .row-gap {
     flex-direction: column;
     row-gap: 10px;
@@ -228,4 +139,20 @@ summary {
     color: #1d1f1c;
     background-color: #A7D129;
     border-radius: 5px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    padding: 20px 30px;
+    background-color: #A7D129;
+    color: #1d1f1c;
+}
+
+footer a {
+    color: var(--third-color);
+    text-decoration: none;
 }
