@@ -14,7 +14,7 @@
     <section class="container">
         <details>
             <summary>Propriedades de pais</summary>
-            <section class="property">
+            <section class="card">
                 <h2>display</h2>
                 <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
                 <pre>
@@ -31,18 +31,23 @@
                     </div>
                 </div>
             </section>
-            <section class="property">
-                <h2>flex-direction</h2>
+            <section class="card">
+                <h2 class="property">flex-direction</h2>
                 <p>Essa propriedade estabelece o eixo-principal, assim, definindo a direção em que os itens flex do container estarão posicionados.</p>
-                <pre>
-                    .container {
-                        flex-direction: row | row-reverse | column | column-reverse;
-                    }
-                </pre>
-                <h3>Exemplos:</h3>
+                <h3>Selecione um valor para ver o exemplo:</h3>
                 <div class="examples">
-                    <p>row (padrão)</p>
-                    <div class="flex row">
+                    <div class="options">
+                        <h4>flex-direction:: </h4>
+                        <nav>
+                            <ul>
+                                <li class="option">row</li>|
+                                <li class="option">row-reverse</li>|
+                                <li class="option">column</li>|
+                                <li class="option">column-reverse</li>;
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="flex parent">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
@@ -54,8 +59,24 @@
                         <div class="item">9</div>
                         <div class="item" >10</div>
                     </div>
-                    <p>row-reverse </p>
-                    <div class="flex row-reverse">
+                </div>
+            </section>
+            <section class="card">
+                <h2 class="property">flex-wrap</h2>
+                <p>Por padrão, itens flex vão tentar se encaixar em uma linha. Você pode alterar isso para permitir que os itens sejam "envolvidos" por esta propriedade conforme a necessidade.</p>
+                <h3>Selecione um valor para ver o exemplo:</h3>
+                <div class="examples">
+                    <div class="options">
+                        <h4>flex-wrap: </h4>
+                        <nav>
+                            <ul>
+                                <li class="option">nowrap</li>|
+                                <li class="option">wrap</li>|
+                                <li class="option">wrap-reverse</li>;
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="flex parent">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
@@ -65,23 +86,16 @@
                         <div class="item">7</div>
                         <div class="item">8</div>
                         <div class="item">9</div>
-                        <div class="item">10</div>
-                    </div>
-                    <p>column</p>
-                    <div class="flex column">
-                        <div class="item">1</div>
-                        <div class="item">2</div>
-                        <div class="item">3</div>
-                    </div>
-                    <p>column-reverse</p>
-                    <div class="flex column-reverse">
-                        <div class="item">1</div>
-                        <div class="item">2</div>
-                        <div class="item">3</div>
+                        <div class="item" >10</div>
+                        <div class="item" >11</div>
+                        <div class="item" >12</div>
+                        <div class="item" >13</div>
+                        <div class="item" >14</div>
+                        <div class="item" >15</div>
                     </div>
                 </div>
             </section>
-            <section class="property">
+            <section class="card">
                 <h2>flex-wrap</h2>
                 <p>Por padrão, itens flex vão tentar se encaixar em uma linha. Você pode alterar isso para permitir que os itens sejam "envolvidos" por esta propriedade conforme a necessidade.</p>
                 <pre>
@@ -132,7 +146,7 @@
                     </div>
                 </div>
             </section>
-            <section class="property">
+            <section class="card">
                 <h2>flex-flow</h2>
                 <p>Este é um atalho/abreviação para o flex-direction e o flex-wrap, que juntos definem os eixos do container. O valor padrão é row nowrap.</p>
                 <pre>
@@ -156,56 +170,32 @@
                     </div>
                 </div>
             </section>
-            <section class="property">
-                <h2>justify-content</h2>
+            <section class="card">
+                <h2 class="property">justify-content</h2>
                 <p>Esta propriedade define o alinhamento no eixo horizontal. Isto ajuda a distribuir espaço livre de sobra quando os itens numa linha são inflexíveis, ou são flexíveis mas alcançaram seu tamanho máximo. Também excerce um controle sobre o alinhamento quando os itens transbordam a linha.</p>
-                <pre>
-                    .container {
-                        justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
-                    }
-                </pre>
-                <h3>Exemplos:</h3>
+                <h3>Selecione um valor para ver o exemplo:</h3>
                 <div class="examples">
-                    <p>flex-start (padrão)</p>
-                    <div class="flex justify-flex-start">
-                        <div class="item">1</div>
-                        <div class="item">2</div>
-                        <div class="item">3</div>
-                        
+                    <div class="options">
+                        <h4>justify-content: </h4>
+                        <nav>
+                            <ul>
+                                <li class="option">flex-start</li>|
+                                <li class="option">flex-end</li>|
+                                <li class="option">center</li>|
+                                <li class="option">space-between</li>|
+                                <li class="option">space-around</li>|
+                                <li class="option">space-evenly</li>;
+                            </ul>
+                        </nav>
                     </div>
-                    <p>flex-end </p>
-                    <div class="flex justify-flex-end">
-                        <div class="item">1</div>
-                        <div class="item">2</div>
-                        <div class="item">3</div>
-                    </div>
-                    <p>center</p>
-                    <div class="flex justify-center">
-                        <div class="item">1</div>
-                        <div class="item">2</div>
-                        <div class="item">3</div>
-                    </div>
-                    <p>space-between</p>
-                    <div class="flex justify-space-between">
-                        <div class="item">1</div>
-                        <div class="item">2</div>
-                        <div class="item">3</div>
-                    </div>
-                    <p>space-around</p>
-                    <div class="flex justify-space-around">
-                        <div class="item">1</div>
-                        <div class="item">2</div>
-                        <div class="item">3</div>
-                    </div>
-                    <p>space-evenly</p>
-                    <div class="flex justify-space-evenly">
+                    <div class="flex parent">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
                     </div>
                 </div>
             </section>
-            <section class="property">
+            <section class="card">
                 <h2>align-items</h2>
                 <p>Isto define o comportamento de como os itens serão distribuidos em paralelo ao eixo vertical na linha atual.</p>
                 <pre>
@@ -247,7 +237,7 @@
                     </div>
                 </div>
             </section>
-            <section class="property">
+            <section class="card">
                 <h2>align-content</h2>
                 <p></p>
                 <pre>
@@ -296,32 +286,17 @@
                 </div>
             </section>
             <!-- gap,row-gap, column-gap -->
-            <section class="property">
+            <section class="card">
                 <h2>gap</h2>
                 <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
                 <pre>
                     .container {
-                        gap: 10px;
-                        gap: 10px 20px;
                         row-gap: 10px;
                         column-gap: 20px;
                     }
                 </pre>
                 <h3>Exemplos:</h3>
                 <div class="examples">
-                    <p>gap</p>
-                    <div class="flex gap">
-                        <div class="item">1</div>
-                        <div class="item">2</div>
-                        <div class="item">3</div>
-                        <div class="item">4</div>
-                        <div class="item">5</div>
-                        <div class="item">6</div>
-                        <div class="item">7</div>
-                        <div class="item">8</div>
-                        <div class="item">9</div>
-                        <div class="item">10</div>
-                    </div>
                     <p>row-gap</p>
                     <div class="flex row-gap">
                         <div class="item">1</div>
@@ -344,3 +319,50 @@
     <footer>Desenvolvido por <a href="https://github.com/JassonJr">Jasson Jr.</a></footer>
 </body>
 </html>
+
+<script>
+    var option = document.getElementsByClassName("option")
+    var property = document.getElementsByClassName("property")
+    var parent = document.getElementsByClassName("parent")
+
+    console.log(option)
+    for (var i = 0; i < option.length; i++) {
+        option[i].addEventListener("click", function() {
+            for (var j = 0; j < option.length; j++) {
+                option[j].classList.remove("active")
+            }
+            this.classList.toggle("active")
+            if (property[0].innerHTML == "flex-direction") parent[0].style.flexDirection = this.innerHTML
+            else if (property[0].innerHTML == "flex-wrap") parent[0].style.flexWrap = this.innerHTML
+            else if (property[0].innerHTML == "justify-content") parent[0].style.justifyContent = this.innerHTML
+            else if (property[0].innerHTML == "align-items") parent[0].style.alignItems = this.innerHTML
+            else if (property[0].innerHTML == "align-content") parent[0].style.alignContent = this.innerHTML
+        })
+    }
+</script>
+
+<!-- <section class="card">
+                <h2 class="property">justify-content</h2>
+                <p>Esta propriedade define o alinhamento no eixo horizontal. Isto ajuda a distribuir espaço livre de sobra quando os itens numa linha são inflexíveis, ou são flexíveis mas alcançaram seu tamanho máximo. Também excerce um controle sobre o alinhamento quando os itens transbordam a linha.</p>
+                <h3>Selecione um valor para ver o exemplo:</h3>
+                <div class="examples">
+                    <div class="options">
+                        <h4>justify-content: </h4>
+                        <nav>
+                            <ul>
+                                <li class="option">flex-start</li>|
+                                <li class="option">flex-end</li>|
+                                <li class="option">center</li>|
+                                <li class="option">space-between</li>|
+                                <li class="option">space-around</li>|
+                                <li class="option">space-evenly</li>;
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="flex justify-content">
+                        <div class="item">1</div>
+                        <div class="item">2</div>
+                        <div class="item">3</div>
+                    </div>
+                </div>
+            </section> -->
