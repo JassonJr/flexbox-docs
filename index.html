@@ -40,10 +40,10 @@
                         <h4>flex-direction:: </h4>
                         <nav>
                             <ul>
-                                <li class="option">row</li>|
-                                <li class="option">row-reverse</li>|
-                                <li class="option">column</li>|
-                                <li class="option">column-reverse</li>;
+                                <li class="value">row</li>|
+                                <li class="value">row-reverse</li>|
+                                <li class="value">column</li>|
+                                <li class="value">column-reverse</li>;
                             </ul>
                         </nav>
                     </div>
@@ -70,9 +70,9 @@
                         <h4>flex-wrap: </h4>
                         <nav>
                             <ul>
-                                <li class="option">nowrap</li>|
-                                <li class="option">wrap</li>|
-                                <li class="option">wrap-reverse</li>;
+                                <li class="value">nowrap</li>|
+                                <li class="value">wrap</li>|
+                                <li class="value">wrap-reverse</li>;
                             </ul>
                         </nav>
                     </div>
@@ -123,12 +123,12 @@
                         <h4>justify-content: </h4>
                         <nav>
                             <ul>
-                                <li class="option">flex-start</li>|
-                                <li class="option">flex-end</li>|
-                                <li class="option">center</li>|
-                                <li class="option">space-between</li>|
-                                <li class="option">space-around</li>|
-                                <li class="option">space-evenly</li>;
+                                <li class="value">flex-start</li>|
+                                <li class="value">flex-end</li>|
+                                <li class="value">center</li>|
+                                <li class="value">space-between</li>|
+                                <li class="value">space-around</li>|
+                                <li class="value">space-evenly</li>;
                             </ul>
                         </nav>
                     </div>
@@ -148,11 +148,11 @@
                         <h4>align-items: </h4>
                         <nav>
                             <ul>
-                                <li class="option">flex-start</li>|
-                                <li class="option">flex-end</li>|
-                                <li class="option">center</li>|
-                                <li class="option">stretch</li>|
-                                <li class="option">baseline</li>;
+                                <li class="value">flex-start</li>|
+                                <li class="value">flex-end</li>|
+                                <li class="value">center</li>|
+                                <li class="value">stretch</li>|
+                                <li class="value">baseline</li>;
                             </ul>
                         </nav>
                     </div>
@@ -172,19 +172,26 @@
                         <h4>align-content: </h4>
                         <nav>
                             <ul>
-                                <li class="option">flex-start</li>|
-                                <li class="option">flex-end</li>|
-                                <li class="option">center</li>|
-                                <li class="option">stretch</li>|
-                                <li class="option">space-between</li>|
-                                <li class="option">space-around</li>;
+                                <li class="value">flex-start</li>|
+                                <li class="value">flex-end</li>|
+                                <li class="value">center</li>|
+                                <li class="value">stretch</li>|
+                                <li class="value">space-between</li>|
+                                <li class="value">space-around</li>;
                             </ul>
                         </nav>
                     </div>
-                    <div class="flex parent center">
+                    <div class="flex parent center align-content">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                        <div class="item">6</div>
+                        <div class="item">7</div>
+                        <div class="item">8</div>
+                        <div class="item">9</div>
+                        <div class="item">10</div>
                     </div>
                 </div>
             </section>
@@ -225,29 +232,27 @@
         </p>
     </footer>
     <script>
-        var option = document.getElementsByClassName("option")
-        var property = document.getElementsByClassName("property")
-        var parent = document.getElementsByClassName("parent")
-    
-    
-        console.log(option)
-        console.log(property)
-        console.log(parent)
-    
-        for (var i = 0; i < option.length; i++) {
-            option[i].addEventListener("click", function() {
-                for (var j = 0; j < option.length; j++) {
-                    option[j].classList.remove("active")
+        var values = document.getElementsByClassName("value")
+        const cards = document.getElementsByClassName("card");
+
+        for (var j = 0; j < values.length; j++) {
+                    values[j].addEventListener("click", function() {
+                    for (var k = 0; k < values.length; k++) {
+                    values[k].classList.remove("active")
                 }
                 this.classList.toggle("active")
-                for (var k = 0; k < property.length; k++) {
-                    if (property[k].innerHTML == "flex-direction") parent[k].style.flexDirection = this.innerHTML
-                    else if (property[k].innerHTML == "flex-wrap") parent[k].style.flexWrap = this.innerHTML
-                    else if (property[k].innerHTML == "justify-content") parent[k].style.justifyContent = this.innerHTML
-                    else if (property[k].innerHTML == "align-items") parent[k].style.alignItems = this.innerHTML
-                    else if (property[k].innerHTML == "align-content") parent[k].style.alignContent = this.innerHTML
-                }
             })
+        }
+
+        for(let i = 0; i < cards.length; i++) {
+            cards[i].addEventListener("click", function(e) {
+                const property = this.getElementsByClassName("property")[0].innerText;
+                console.log(property)
+                const value = e.target.innerText;
+                const parent = this.getElementsByClassName("parent")[0];
+                console.log(parent)
+                parent.style[property] = value;
+            });  
         }
     </script>
 </body>
