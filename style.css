@@ -1,30 +1,96 @@
+/*=====================================configuração root=====================================*/
 :root {
-    /* color palette */
+    /* paleta de cores */
     --primary-color: #fafafb;
     --secondary-color: #92a0a6;
     --logo-color: #65b5d8;
     --container-color: #151526;
     --background-color: #09091b;
-    /* typography */
-    --title-font: Poppins;
+    /* tipografia */
+    --title-font: Pixelify Sans;
     --text-font: roboto;
      font-size: 16px;
 }
+/*=====================================estilização barra de scroll=====================================*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 5px;
+  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+/*=====================================estilização body=====================================*/
+body {
+    min-height: 100vh;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+}
+/*=====================================estilização tipografia inicial=====================================*/
+h1, h3, h4, h5, h6, summary {
+    font-family: var(--title-font);
+    letter-spacing: 0.1rem;
+}
+h2, h3, h4 {
+    color: var(--secondary-color);
+}
+p, h2, h4 {
+    font-family: var(--text-font);
+}
+/*=====================================estilização header principal=====================================*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
 
-/*
-color: #09091b; body 
-color: #0b0a10; header
-color: #151526; container principal
-color: #20273c; cor code 
-color: #5395fd; cor propriedade css
-color: #65b5d8; cor logo 
-color: #92a0a6; cor subtitulos 
-color: #bae0a3; cor elemento css 
-color: #d97171; cor valor css
-color: #fafafb; cor texto e titulo 
-color: #ff911f; cor numero css 
-*/
+    text-transform: uppercase;
+    font-size: 3rem; /* 1rem = 16px */
+    font-weight: bold;
+    color: var(--logo-color);
+}
+.header h2 {
+    color: white;
+}
+.logo {
+    color: blue;
+}
+/*=====================================estilização container principal=====================================*/
+.container {
+    background-color: var(--container-color);
+    /* color: #A7D129; */
+    
+    margin: 0 1.2rem;
+    padding: 1rem 1.1rem;
+}
+/*=====================================estilização details=====================================*/
+summary {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+/*=====================================estilização textos de códigos=====================================*/
+code {
+    display: flex;
+    flex-direction: column;
 
+    padding: 1rem 1.25rem;
+    row-gap: 0.625rem;
+
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 1.4rem;
+    background-color: #20273c;
+}
+pre {
+    font-family: monospace;
+}
 .class-name {
     color: #bae0a3;
 }
@@ -37,150 +103,14 @@ color: #ff911f; cor numero css
 .ponctuation {
     color: white;
 }
-
-code {
-    display: flex;
-    flex-direction: column;
-
-    padding: 15px 20px;
-    row-gap: 10px;
-
-    border-radius: 10px;
-    font-family: monospace;
-    background-color: #20273c;
-}
-
-body {
-    min-height: 100vh;
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-}
-
-h1, h2, h3, h4, h5, h6, summary {
-    font-family: var(--title-font);
-}
-
-h2, h3, h4 {
-    color: var(--secondary-color);
-}
-
-p {
-    font-family: var(--text-font);
-}
-
-pre {
-    font-family: monospace;
-}
-
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-
-    text-transform: uppercase;
-    font-size: 28pt;
-    font-weight: bold;
-    color: var(--logo-color);
-}
-
-.container {
-    background-color: var(--container-color);
-    /* color: #A7D129; */
-
-    margin: 0 1.2rem;
-    padding: 1rem 1.1rem;
-}
-
-summary {
-    color: #fafafb;
-    font-size: 22pt;
-}
-.card {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem 0;
-    padding: 1.5rem 2rem;
-}
-
-.card h2 {
-    font-size: 18pt;
-}
-
-.card p {
-    color: var(--primary-color);
-    font-size: 14pt;
-}
-
-.examples { 
-    display: flex;
-    flex-direction: column;
-}
-.examples p{
-    font-size: 18pt;
-}
-
-.center {
-    align-self: center;
-}
-.item:nth-of-type(odd) {
-    height: 50px;
-}
-.item:nth-child(even) {
-    height: 70px;
-}
-
-.item {
-    background-color: var(--third-color);
-
-    width: 50px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex {
-    display: flex;
-    /* gap: 2rem 2rem; */
-
-    /* padding: 2rem; */
-    margin: 1rem;
-    padding: 1rem;
-    height: 20rem;
-    width: 30rem;
-
-    border: 2px solid var(--primary-color);
-}
-
-/* flex-flow */
-.flex-flow {
-    flex-flow: column wrap;
-}
-.align-content {
-    flex-wrap: wrap;
-}
-/* gap */
-.row-gap {
-    flex-direction: column;
-    row-gap: 10px;
-}
-
-.column-gap {
-    column-gap: 20px;
-}
-
-
+/*=====================================estilização opções=====================================*/
 .options {
     display: flex;
     column-gap: 10px;
     align-items: center;
 }
-
 .options h4 {
-    line-height: 2rem;
+    white-space: nowrap;
 }
 .options ul {
     display: flex;
@@ -188,15 +118,92 @@ summary {
     column-gap: 5px;
 }
 .options li:hover {
-    color: white;
+      color: white;
 }
 .active {
-    padding: 2px 4px;
-    color: #1d1f1c;
-    background-color: #A7D129;
+      padding: 2px 4px;
+      color: var(--container-color);
+      background-color: var(--logo-color);
+      border-radius: 5px;
+}
+/*=====================================estilização seções=====================================*/
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem 0;
+    padding: 1.5rem 2rem;
+}
+.card h2 {
+    font-size: 2rem;
+}
+.card p {
+    padding: 0 1rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+.examples { 
+    display: flex;
+    flex-direction: column;
+}
+/*=====================================estilização elemento pai=====================================*/
+.flex {
+    display: flex;
+
+    margin: 1rem;
+    padding: 1rem;
+    height: 20rem;
+    width: 30rem;
+
+    border: 2px solid var(--primary-color);
+}
+.center {
+    align-self: center;
+}
+  /*=====================================estilização elemento filho=====================================*/
+.item {
+    height: 50px;
+    width: 50px;
+    background-color: var(--logo-color);
+    color: var(--primary-color);
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item:nth-child(even) {
+    height: 70px;
+}
+/*=====================================flex-flow=====================================*/
+.flex-flow {
+    flex-direction: row;
+    overflow: scroll;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+}
+.flex-flow ul {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+/*=====================================align-items=====================================*/
+.align-items .item{
+    width: 100px;
+    flex-wrap: wrap;
+}
+/*=====================================align-content=====================================*/
+.align-content {
+    flex-wrap: wrap;
+}
+/*=====================================gap=====================================*/
+.row-gap {
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* row-gap: 10px; */
+}
+.column-gap {
+    flex-wrap: wrap;
 }
 
+/*=====================================estilização footer=====================================*/
 footer {
     display: flex;
     align-items: center;
@@ -212,3 +219,44 @@ footer a {
     color: var(--logo-color);
     text-decoration: none;
 }
+
+/*=====================================Responsividade=====================================*/
+@media screen and (max-width: 800px) {
+    .header {
+        flex-wrap: wrap;
+    }
+    .card p {
+        text-align:justify;
+    }
+    .flex {
+        width: 20rem;
+    }
+    .options {
+        flex-direction: row;
+        overflow: scroll;
+        overflow-y: hidden;
+        padding-bottom: 20px;
+    }
+    .options ul {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width: 650px) {
+    .header {
+        justify-content: center;
+    }
+}
+/*
+color: #09091b; body 
+color: #0b0a10; header
+color: #151526; container principal
+color: #20273c; cor code 
+color: #5395fd; cor propriedade css
+color: #65b5d8; cor logo 
+color: #92a0a6; cor subtitulos 
+color: #bae0a3; cor elemento css 
+color: #d97171; cor valor css
+color: #fafafb; cor texto e titulo 
+color: #ff911f; cor numero css 
+*/

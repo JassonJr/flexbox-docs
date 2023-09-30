@@ -6,21 +6,22 @@
     <title>Flexbox - Documentação</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- fontes de texto externas -->
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&family=Poppins:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <h1 class="logo">Flex Guide</h1>
+        <h1>Flex Guide</h1>
+        <h2>Ford<span class="logo">&lt;ENTER&gt;</span></h2>
     </header>
     <section class="container">
         <details>
             <summary>Propriedades de pais</summary>
+            <!-- demonstração display flex -->
             <section class="card">
                 <h2>display</h2>
                 <p>Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.</p>
-                <h3>Exemplos:</h3>
+                <h3>Exemplo:</h3>
                 <code>
                     <span class="ponctuation">CSS</span>
                     <pre><span class="class-name">.container</span> <span class="ponctuation">{</span></pre>
@@ -28,10 +29,11 @@
                     <pre><span class="ponctuation">}</span></pre>
                 </code>
             </section>
-            <section class="card">
+            <!-- demonstração flex-direction -->
+            <section class="card section">
                 <h2 class="property">flex-direction</h2>
                 <p>
-                    Define a direção dos flex itens. Por padrão ele é row (linha), por isso quando o <span class="highlight">display: flex;</span> é adicionado, os elementos ficam em linha, um do lado do outro.
+                    Define a direção dos flex itens. Por padrão ele é row (linha), por isso quando o {<span class="class-property">display</span>:<span class="property-value"> flex</span>;} é adicionado, os elementos ficam em linha, um do lado do outro.
                 </p>
                 <p>
                     A mudança de row para column geralmente acontece quando estamos definindo os estilos em media queries para o mobile. Assim você garante que o conteúdo seja apresentado em coluna única.
@@ -67,13 +69,14 @@
                     <div class="item" >10</div>
                 </div>
             </section>
-            <section class="card">
+            <!-- demonstração flex-wrap -->
+            <section class="card section">
                 <h2 class="property">flex-wrap</h2>
                 <p>
                     Define se os itens devem quebrar ou não a linha. Por padrão eles não quebram linha, isso faz com que os flex itens sejam compactados além do limite do conteúdo.
                 </p>
                 <p>
-                    Essa é geralmente uma propriedade que é quase sempre definida como flex-wrap: wrap; Pois assim quando um dos flex itens atinge o limite do conteúdo, o último item passa para a coluna debaixo e assim por diante.
+                    Essa é geralmente uma propriedade que é quase sempre definida como "flex-wrap: wrap;" Pois assim quando um dos flex itens atinge o limite do conteúdo, o último item passa para a coluna debaixo e assim por diante.
                 </p>
                 <h3>Selecione um valor para ver o exemplo:</h3>
                 <div class="examples">
@@ -105,7 +108,8 @@
                     </div>
                 </div>
             </section>
-            <section class="card">
+            <!-- demonstração flex-flow -->
+            <section class="card section">
                 <h2 class="property">flex-flow</h2>
                 <p>
                     O flex-flow é um atalho para as propriedades flex-direction e flex-wrap. Você não verá muito o seu uso, pois geralmente quando mudamos o flex-direction para column, mantemos o padrão do flex-wrap que é nowrap.
@@ -152,7 +156,8 @@
                     </div>
                 </div>
             </section>
-            <section class="card">
+            <!-- demonstração justify-content -->
+            <section class="card section">
                 <h2 class="property">justify-content</h2>
                 <p>
                     Alinha os itens flex no container de acordo com a direção. A propriedade só funciona se os itens atuais não ocuparem todo o container. Isso significa que ao definir flex: 1; ou algo similar nos itens, a propriedade não terá mais função.
@@ -186,7 +191,8 @@
                     </div>
                 </div>
             </section>
-            <section class="card">
+            <!-- demonstração align-items -->
+            <section class="card section">
                 <h2 class="property">align-items</h2>
                 <p>
                     O align-items alinha os flex itens de acordo com o eixo do container. O alinhamento é diferente para quando os itens estão em colunas ou linhas.
@@ -212,14 +218,15 @@
                             </nav>
                         </div>
                     </code>
-                    <div class="flex parent center">
-                        <div class="item">1</div>
-                        <div class="item">item do meio</div>
-                        <div class="item">terceiro item</div>
+                    <div class="flex parent center align-items">
+                        <div class="item">Lorem, ipsum.</div>
+                        <div class="item">Lorem ipsum dolor sit amet.</div>
+                        <div class="item">Lorem ipsum dolor sit amet consectetur.</div>
                     </div>
                 </div>
             </section>
-            <section class="card">
+            <!-- demonstração align-content -->
+            <section class="card section">
                 <h2 class="property">align-content</h2>
                 <p>
                     Alinha as linhas do container em relação ao eixo vertical. A propriedade só funciona se existir mais de uma linha de flex-itens. Para isso o flex-wrap precisa ser wrap.
@@ -260,8 +267,8 @@
                     </div>
                 </div>
             </section>
-            <!-- gap,row-gap, column-gap -->
-            <section class="card">
+            <!-- demonstração row-gap -->
+            <section class="card section">
                 <h2>gap</h2>
                 <p>A propriedade gap controla o espaço entre os itens flexíveis. Aplicando espaço <em>entre os itens</em> e não nos espaços de fora.</p>
                 <h3>Selecione um valor para ver o exemplo:</h3>
@@ -294,7 +301,8 @@
                     </div>
                 </div>
             </section>
-            <section class="card">
+            <!-- demonstração column-gap -->
+            <section class="card section">
                 <div class="examples">
                     <code>
                         <div class="options">
@@ -335,9 +343,10 @@
         </p>
     </footer>
     <script>
+        //variaveis de valor da propriedade flex e de seção
         var values = document.getElementsByClassName("value")
-        const cards = document.getElementsByClassName("card");
-
+        const section = document.getElementsByClassName("section");
+        //habilitando a opção clicada
         for (var j = 0; j < values.length; j++) {
             values[j].addEventListener("click", function() {
                 for (var k = 0; k < values.length; k++) {
@@ -346,16 +355,15 @@
                 this.classList.toggle("active")
             })
         }
-
-        for(let i = 0; i < cards.length; i++) {
-            cards[i].addEventListener("click", function(e) {
+        //Identificando o ponto clicado, a propriedade flex a ser aplicada e atribuindo os valores
+        for(let i = 0; i < section.length; i++) {
+            section[i].addEventListener("click", function(e) {
                 const property = this.getElementsByClassName("property")[0].innerText;
                 const value = e.target.innerText;
                 const parent = this.getElementsByClassName("parent")[0];
                 parent.style[property] = value;
             });  
         }
-
     </script>
 </body>
 </html>
