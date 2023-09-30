@@ -65,15 +65,21 @@ p, h2, h4 {
 /*=====================================estilização container principal=====================================*/
 .container {
     background-color: var(--container-color);
-    /* color: #A7D129; */
-    
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;    
     margin: 0 1.2rem;
     padding: 1rem 1.1rem;
 }
 /*=====================================estilização details=====================================*/
 summary {
     color: var(--primary-color);
+    margin-bottom: 1rem;
     font-size: 2rem;
+}
+
+details section:nth-child(even) {
+    background-color: var(--background-color);
 }
 /*=====================================estilização textos de códigos=====================================*/
 code {
