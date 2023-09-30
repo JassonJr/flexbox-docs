@@ -1,27 +1,78 @@
 :root {
     /* color palette */
-    --primary-color: #A7D129;
-    --secondary-color: #616F39;
-    --third-color: #3E432E;
-    --fourth-color: #1d1f1c;
-    --background-color: #0a0a0a;
+    --primary-color: #fafafb;
+    --secondary-color: #92a0a6;
+    --logo-color: #65b5d8;
+    --container-color: #151526;
+    --background-color: #09091b;
     /* typography */
-    --title-font: Helvetica, sans-serif;
-    --text-font: monospace;
+    --title-font: Poppins;
+    --text-font: roboto;
      font-size: 16px;
 }
 
+/*
+color: #09091b; body 
+color: #0b0a10; header
+color: #151526; container principal
+color: #20273c; cor code 
+color: #5395fd; cor propriedade css
+color: #65b5d8; cor logo 
+color: #92a0a6; cor subtitulos 
+color: #bae0a3; cor elemento css 
+color: #d97171; cor valor css
+color: #fafafb; cor texto e titulo 
+color: #ff911f; cor numero css 
+*/
+
+.class-name {
+    color: #bae0a3;
+}
+.class-property {
+    color: #5395fd;
+}
+.property-value {
+    color: #d97171;
+}
+.ponctuation {
+    color: white;
+}
+
+code {
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px 20px;
+    row-gap: 10px;
+
+    border-radius: 10px;
+    font-family: monospace;
+    background-color: #20273c;
+}
+
 body {
+    min-height: 100vh;
     background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6, summary {
     font-family: var(--title-font);
 }
 
+h2, h3, h4 {
+    color: var(--secondary-color);
+}
+
 p {
     font-family: var(--text-font);
 }
+
+pre {
+    font-family: monospace;
+}
+
 
 .header {
     display: flex;
@@ -32,18 +83,19 @@ p {
     text-transform: uppercase;
     font-size: 28pt;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--logo-color);
 }
 
 .container {
-    background-color: var(--fourth-color);
-    color: #A7D129;
+    background-color: var(--container-color);
+    /* color: #A7D129; */
 
     margin: 0 1.2rem;
     padding: 1rem 1.1rem;
 }
 
 summary {
+    color: #fafafb;
     font-size: 22pt;
 }
 .card {
@@ -58,6 +110,7 @@ summary {
 }
 
 .card p {
+    color: var(--primary-color);
     font-size: 14pt;
 }
 
@@ -104,7 +157,7 @@ summary {
 
 /* flex-flow */
 .flex-flow {
-    flex-flow: row wrap-reverse;
+    flex-flow: column wrap;
 }
 .align-content {
     flex-wrap: wrap;
@@ -148,14 +201,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin-top: auto;
 
     padding: 20px 30px;
-    background-color: #A7D129;
-    color: #1d1f1c;
+    /* background-color: #A7D129; */
+    color: var(--primary-color);
 }
 
 footer a {
-    color: var(--third-color);
+    color: var(--logo-color);
     text-decoration: none;
 }

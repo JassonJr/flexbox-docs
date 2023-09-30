@@ -6,6 +6,7 @@
     <title>Flexbox - Documentação</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -17,12 +18,13 @@
             <section class="card">
                 <h2>display</h2>
                 <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
-                <pre>
-                    .container {
-                        display: flex;
-                    }
-                </pre>
                 <h3>Exemplos:</h3>
+                <code>
+                    <span class="ponctuation">CSS</span>
+                    <pre><span class="class-name">.container</span> <span class="ponctuation">{</span></pre>
+                    <pre>       <span class="class-property">display</span><span class="ponctuation">:</span> <span class="property-value">flex</span><span class="ponctuation">;</span></pre>
+                    <pre><span class="ponctuation">}</span></pre>
+                </code>
                 <div class="examples">
                     <div class="flex center">
                         <div class="item">1</div>
@@ -37,7 +39,7 @@
                 <h3>Selecione um valor para ver o exemplo:</h3>
                 <div class="examples">
                     <div class="options">
-                        <h4>flex-direction:: </h4>
+                        <h4>flex-direction: </h4>
                         <nav>
                             <ul>
                                 <li class="value">row</li>|
@@ -93,12 +95,12 @@
             <section class="card">
                 <h2>flex-flow</h2>
                 <p>Este é um atalho/abreviação para o flex-direction e o flex-wrap, que juntos definem os eixos do container. O valor padrão é row nowrap.</p>
-                <pre>
-                    .container {
-                        flex-flow: column wrap;
-                    }
-                </pre>
                 <h3>Exemplo:</h3>
+                <code>
+                    <pre>.container {</pre>
+                    <pre>       flex-flow: column wrap;</pre>
+                    <pre>}</pre>
+                </code>
                 <div class="examples">
                     <div class="flex flex-flow center">
                         <div class="item">1</div>
@@ -199,13 +201,13 @@
             <section class="card">
                 <h2>gap</h2>
                 <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
-                <pre>
-                    .container {
-                        row-gap: 10px;
-                        column-gap: 20px;
-                    }
-                </pre>
                 <h3>Exemplos:</h3>
+                <code>
+                    <pre>.container {</pre>
+                    <pre>       row-gap: 10px;</pre>
+                    <pre>       column-gap: 20px;</pre>
+                    <pre>}</pre>
+                </code>
                 <div class="examples">
                     <p>row-gap</p>
                     <div class="flex row-gap center">
@@ -228,7 +230,7 @@
     </section>
     <footer>
         <p>
-            Desenvolvido por <a href="https://github.com/JassonJr">Jasson Jr.</a>
+            Desenvolvido por <a href="https://github.com/JassonJr">&lt;Jasson Jr.&gt;</a>
         </p>
     </footer>
     <script>
@@ -236,8 +238,8 @@
         const cards = document.getElementsByClassName("card");
 
         for (var j = 0; j < values.length; j++) {
-                    values[j].addEventListener("click", function() {
-                    for (var k = 0; k < values.length; k++) {
+            values[j].addEventListener("click", function() {
+                for (var k = 0; k < values.length; k++) {
                     values[k].classList.remove("active")
                 }
                 this.classList.toggle("active")
@@ -247,13 +249,12 @@
         for(let i = 0; i < cards.length; i++) {
             cards[i].addEventListener("click", function(e) {
                 const property = this.getElementsByClassName("property")[0].innerText;
-                console.log(property)
                 const value = e.target.innerText;
                 const parent = this.getElementsByClassName("parent")[0];
-                console.log(parent)
                 parent.style[property] = value;
             });  
         }
+
     </script>
 </body>
 </html>
