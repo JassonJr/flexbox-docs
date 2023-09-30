@@ -6,7 +6,9 @@
     <title>Flexbox - Documentação</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&family=Poppins:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -17,7 +19,7 @@
             <summary>Propriedades de pais</summary>
             <section class="card">
                 <h2>display</h2>
-                <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
+                <p>Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.</p>
                 <h3>Exemplos:</h3>
                 <code>
                     <span class="ponctuation">CSS</span>
@@ -25,59 +27,70 @@
                     <pre>       <span class="class-property">display</span><span class="ponctuation">:</span> <span class="property-value">flex</span><span class="ponctuation">;</span></pre>
                     <pre><span class="ponctuation">}</span></pre>
                 </code>
-                <div class="examples">
-                    <div class="flex center">
-                        <div class="item">1</div>
-                        <div class="item">2</div>
-                        <div class="item">3</div>
-                    </div>
-                </div>
             </section>
             <section class="card">
                 <h2 class="property">flex-direction</h2>
-                <p>Essa propriedade estabelece o eixo-principal, assim, definindo a direção em que os itens flex do container estarão posicionados.</p>
+                <p>
+                    Define a direção dos flex itens. Por padrão ele é row (linha), por isso quando o <span class="highlight">display: flex;</span> é adicionado, os elementos ficam em linha, um do lado do outro.
+                </p>
+                <p>
+                    A mudança de row para column geralmente acontece quando estamos definindo os estilos em media queries para o mobile. Assim você garante que o conteúdo seja apresentado em coluna única.
+                </p>
                 <h3>Selecione um valor para ver o exemplo:</h3>
-                <div class="examples">
-                    <div class="options">
-                        <h4>flex-direction: </h4>
-                        <nav>
-                            <ul>
-                                <li class="value">row</li>|
-                                <li class="value">row-reverse</li>|
-                                <li class="value">column</li>|
-                                <li class="value">column-reverse</li>;
-                            </ul>
-                        </nav>
+                <code>
+                    <div class="examples">
+                        <div class="options">
+                            <h4><span class="class-property">flex-direction: </span></h4>
+                            <nav>
+                                <span class="property-value">
+                                    <ul>
+                                        <li class="value">row</li>|
+                                        <li class="value">row-reverse</li>|
+                                        <li class="value">column</li>|
+                                        <li class="value">column-reverse</li><span class="ponctuation">;</span>
+                                    </ul>
+                                </span>
+                            </nav>
+                        </div>
                     </div>
-                    <div class="flex parent center">
-                        <div class="item">1</div>
-                        <div class="item">2</div>
-                        <div class="item">3</div>
-                        <div class="item">4</div>
-                        <div class="item">5</div>
-                        <div class="item">6</div>
-                        <div class="item">7</div>
-                        <div class="item">8</div>
-                        <div class="item">9</div>
-                        <div class="item" >10</div>
-                    </div>
+                </code>
+                <div class="flex parent center">
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">5</div>
+                    <div class="item">6</div>
+                    <div class="item">7</div>
+                    <div class="item">8</div>
+                    <div class="item">9</div>
+                    <div class="item" >10</div>
                 </div>
             </section>
             <section class="card">
                 <h2 class="property">flex-wrap</h2>
-                <p>Por padrão, itens flex vão tentar se encaixar em uma linha. Você pode alterar isso para permitir que os itens sejam "envolvidos" por esta propriedade conforme a necessidade.</p>
+                <p>
+                    Define se os itens devem quebrar ou não a linha. Por padrão eles não quebram linha, isso faz com que os flex itens sejam compactados além do limite do conteúdo.
+                </p>
+                <p>
+                    Essa é geralmente uma propriedade que é quase sempre definida como flex-wrap: wrap; Pois assim quando um dos flex itens atinge o limite do conteúdo, o último item passa para a coluna debaixo e assim por diante.
+                </p>
                 <h3>Selecione um valor para ver o exemplo:</h3>
                 <div class="examples">
-                    <div class="options">
-                        <h4>flex-wrap: </h4>
-                        <nav>
-                            <ul>
-                                <li class="value">nowrap</li>|
-                                <li class="value">wrap</li>|
-                                <li class="value">wrap-reverse</li>;
-                            </ul>
-                        </nav>
-                    </div>
+                    <code>
+                        <div class="options">
+                            <h4><span class="class-property">flex-wrap: </span></h4>
+                            <nav>
+                                <span class="property-value">
+                                    <ul>
+                                        <li class="value">nowrap</li>|
+                                        <li class="value">wrap</li>|
+                                        <li class="value">wrap-reverse</li><span class="ponctuation">;</span>
+                                    </ul>
+                                </span>
+                            </nav>
+                        </div>
+                    </code>
                     <div class="flex parent center">
                         <div class="item">1</div>
                         <div class="item">2</div>
@@ -93,16 +106,39 @@
                 </div>
             </section>
             <section class="card">
-                <h2>flex-flow</h2>
-                <p>Este é um atalho/abreviação para o flex-direction e o flex-wrap, que juntos definem os eixos do container. O valor padrão é row nowrap.</p>
-                <h3>Exemplo:</h3>
-                <code>
-                    <pre>.container {</pre>
-                    <pre>       flex-flow: column wrap;</pre>
-                    <pre>}</pre>
-                </code>
+                <h2 class="property">flex-flow</h2>
+                <p>
+                    O flex-flow é um atalho para as propriedades flex-direction e flex-wrap. Você não verá muito o seu uso, pois geralmente quando mudamos o flex-direction para column, mantemos o padrão do flex-wrap que é nowrap.
+                </p>
+                <p>
+                    E quando mudamos o flex-wrap para wrap, mantemos o padrão do flex-direction que é row.
+                </p>
+                <h3>Selecione um valor para ver o exemplo:</h3>
                 <div class="examples">
-                    <div class="flex flex-flow center">
+                    <code>
+                        <div class="options flex-flow">
+                            <h4><span class="class-property">flex-flow: </span></h4>
+                            <nav>
+                                <span class="property-value">
+                                    <ul>
+                                        <li class="value">row nowrap</li>|
+                                        <li class="value">row-reverse nowrap</li>|
+                                        <li class="value">row wrap</li>|
+                                        <li class="value">row wrap-reverse</li>|
+                                        <li class="value">row-reverse wrap</li>|
+                                        <li class="value">row-reverse wrap-reverse</li>|
+                                        <li class="value">column nowrap</li>|
+                                        <li class="value">column-reverse nowrap</li>|
+                                        <li class="value">column wrap</li>|
+                                        <li class="value">column wrap-reverse</li>|
+                                        <li class="value">column-reverse wrap</li>|
+                                        <li class="value">column-reverse wrap-reverse</li><span class="ponctuation">;</span>
+                                    </ul>
+                                </span>
+                            </nav>
+                        </div>
+                    </code>
+                    <div class="flex parent center">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
@@ -112,28 +148,37 @@
                         <div class="item">7</div>
                         <div class="item">8</div>
                         <div class="item">9</div>
-                        <div class="item">10</div>
+                        <div class="item" >10</div>
                     </div>
                 </div>
             </section>
             <section class="card">
                 <h2 class="property">justify-content</h2>
-                <p>Esta propriedade define o alinhamento no eixo horizontal. Isto ajuda a distribuir espaço livre de sobra quando os itens numa linha são inflexíveis, ou são flexíveis mas alcançaram seu tamanho máximo. Também excerce um controle sobre o alinhamento quando os itens transbordam a linha.</p>
+                <p>
+                    Alinha os itens flex no container de acordo com a direção. A propriedade só funciona se os itens atuais não ocuparem todo o container. Isso significa que ao definir flex: 1; ou algo similar nos itens, a propriedade não terá mais função.
+                </p>
+                <p>
+                    Excelente propriedade para ser usada em casos que você deseja alinhar um item na ponta esquerda e outro na direita, como em um simples header com marca e navegação.
+                </p>
                 <h3>Selecione um valor para ver o exemplo:</h3>
                 <div class="examples">
-                    <div class="options">
-                        <h4>justify-content: </h4>
-                        <nav>
-                            <ul>
-                                <li class="value">flex-start</li>|
-                                <li class="value">flex-end</li>|
-                                <li class="value">center</li>|
-                                <li class="value">space-between</li>|
-                                <li class="value">space-around</li>|
-                                <li class="value">space-evenly</li>;
-                            </ul>
-                        </nav>
-                    </div>
+                    <code>
+                        <div class="options">
+                            <h4><span class="class-property">justify-content: </span></h4>
+                            <nav>
+                                <span class="property-value">
+                                    <ul>
+                                        <li class="value">flex-start</li>|
+                                        <li class="value">flex-end</li>|
+                                        <li class="value">center</li>|
+                                        <li class="value">space-between</li>|
+                                        <li class="value">space-around</li>|
+                                        <li class="value">space-evenly</li></li><span class="ponctuation">;</span>
+                                    </ul>
+                                </span>
+                            </nav>
+                        </div>
+                    </code>
                     <div class="flex parent center">
                         <div class="item">1</div>
                         <div class="item">2</div>
@@ -143,46 +188,64 @@
             </section>
             <section class="card">
                 <h2 class="property">align-items</h2>
-                <p>Isto define o comportamento de como os itens serão distribuidos em paralelo ao eixo vertical na linha atual.</p>
+                <p>
+                    O align-items alinha os flex itens de acordo com o eixo do container. O alinhamento é diferente para quando os itens estão em colunas ou linhas.
+                </p>
+                <p>
+                    Essa propriedade permite o tão sonhado alinhamento central no eixo vertical, algo que antes só era possível com diferentes hacks.
+                </p>
                 <h3>Selecione um valor para ver o exemplo:</h3>
                 <div class="examples">
-                    <div class="options">
-                        <h4>align-items: </h4>
-                        <nav>
-                            <ul>
-                                <li class="value">flex-start</li>|
-                                <li class="value">flex-end</li>|
-                                <li class="value">center</li>|
-                                <li class="value">stretch</li>|
-                                <li class="value">baseline</li>;
-                            </ul>
-                        </nav>
-                    </div>
+                    <code>
+                        <div class="options">
+                            <h4><span class="class-property">align-items: </span></h4>
+                            <nav>
+                                <span class="property-value">
+                                    <ul>
+                                        <li class="value">flex-start</li>|
+                                        <li class="value">flex-end</li>|
+                                        <li class="value">center</li>|
+                                        <li class="value">stretch</li>|
+                                        <li class="value">baseline</li><span class="ponctuation">;</span>
+                                    </ul>
+                                </span>
+                            </nav>
+                        </div>
+                    </code>
                     <div class="flex parent center">
                         <div class="item">1</div>
-                        <div class="item">2</div>
-                        <div class="item">3</div>
+                        <div class="item">item do meio</div>
+                        <div class="item">terceiro item</div>
                     </div>
                 </div>
             </section>
             <section class="card">
                 <h2 class="property">align-content</h2>
-                <p>Isto define o comportamento de como os itens serão distribuidos em paralelo ao eixo vertical na linha atual.</p>
+                <p>
+                    Alinha as linhas do container em relação ao eixo vertical. A propriedade só funciona se existir mais de uma linha de flex-itens. Para isso o flex-wrap precisa ser wrap.
+                </p>
+                <p>
+                    Além disso o efeito dela apenas será visualizado caso o container seja maior que a soma das linhas dos itens. Isso significa que se você não definir height para o container, a propriedade não influencia no layout.
+                </p>
                 <h3>Selecione um valor para ver o exemplo:</h3>
                 <div class="examples">
-                    <div class="options">
-                        <h4>align-content: </h4>
-                        <nav>
-                            <ul>
-                                <li class="value">flex-start</li>|
-                                <li class="value">flex-end</li>|
-                                <li class="value">center</li>|
-                                <li class="value">stretch</li>|
-                                <li class="value">space-between</li>|
-                                <li class="value">space-around</li>;
-                            </ul>
-                        </nav>
-                    </div>
+                    <code>
+                        <div class="options">
+                            <h4><span class="class-property">align-content: </span></h4>
+                            <nav>
+                                <span class="property-value">
+                                    <ul>
+                                        <li class="value">flex-start</li>|
+                                        <li class="value">flex-end</li>|
+                                        <li class="value">center</li>|
+                                        <li class="value">stretch</li>|
+                                        <li class="value">space-between</li>|
+                                        <li class="value">space-around</li><span class="ponctuation">;</span>
+                                    </ul>
+                                </span>
+                            </nav>
+                        </div>
+                    </code>
                     <div class="flex parent center align-content">
                         <div class="item">1</div>
                         <div class="item">2</div>
@@ -200,26 +263,64 @@
             <!-- gap,row-gap, column-gap -->
             <section class="card">
                 <h2>gap</h2>
-                <p>Esta propriedade define um container flex, inline ou block dependendo do valor recebido. Isto habilita o flex para todos os filhos de um elemento pai</p>
-                <h3>Exemplos:</h3>
-                <code>
-                    <pre>.container {</pre>
-                    <pre>       row-gap: 10px;</pre>
-                    <pre>       column-gap: 20px;</pre>
-                    <pre>}</pre>
-                </code>
+                <p>A propriedade gap controla o espaço entre os itens flexíveis. Aplicando espaço <em>entre os itens</em> e não nos espaços de fora.</p>
+                <h3>Selecione um valor para ver o exemplo:</h3>
                 <div class="examples">
-                    <p>row-gap</p>
-                    <div class="flex row-gap center">
+                    <code>
+                        <div class="options">
+                            <h4><span class="class-property"><span class="property">row-gap</span>: </span></h4>
+                            <nav>
+                                <span class="property-value">
+                                    <ul>
+                                        <li class="value">10px</li>|
+                                        <li class="value">20px</li>|
+                                        <li class="value">30px</li><span class="ponctuation">;</span>
+                                    </ul>
+                                </span>
+                            </nav>
+                        </div>
+                    </code>
+                    <div class="flex parent center row-gap">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                        <div class="item">6</div>
+                        <div class="item">7</div>
+                        <div class="item">8</div>
+                        <div class="item">9</div>
+                        <div class="item" >10</div>
                     </div>
-                    <p>columns-gap</p>
-                    <div class="flex column-gap center">
+                </div>
+            </section>
+            <section class="card">
+                <div class="examples">
+                    <code>
+                        <div class="options">
+                            <h4><span class="class-property"><span class="property">column-gap</span>: </span></h4>
+                            <nav>
+                                <span class="property-value">
+                                    <ul>
+                                        <li class="value">10px</li>|
+                                        <li class="value">20px</li>|
+                                        <li class="value">30px</li><span class="ponctuation">;</span>
+                                    </ul>
+                                </span>
+                            </nav>
+                        </div>
+                    </code>
+                    <div class="flex parent center column-gap">
                         <div class="item">1</div>
                         <div class="item">2</div>
                         <div class="item">3</div>
+                        <div class="item">4</div>
+                        <div class="item">5</div>
+                        <div class="item">6</div>
+                        <div class="item">7</div>
+                        <div class="item">8</div>
+                        <div class="item">9</div>
+                        <div class="item" >10</div>
                     </div>
                 </div>
             </section>
