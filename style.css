@@ -64,12 +64,13 @@ p, h2, h4 {
 }
 /*=====================================estilização container principal=====================================*/
 .container {
-    background-color: var(--container-color);
     display: flex;
     flex-direction: column;
     row-gap: 1rem;    
     margin: 0 1.2rem;
     padding: 1rem 1.1rem;
+    background-color: var(--container-color);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 /*=====================================estilização details=====================================*/
 summary {
@@ -77,9 +78,9 @@ summary {
     margin-bottom: 1rem;
     font-size: 2rem;
 }
-
 details section:nth-child(even) {
     background-color: var(--background-color);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 /*=====================================estilização textos de códigos=====================================*/
 code {
@@ -93,6 +94,8 @@ code {
     font-family: monospace;
     font-size: 1.4rem;
     background-color: #20273c;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 5px rgba(48, 55, 140, 0.5)  ;
 }
 pre {
     font-family: monospace;
@@ -125,6 +128,7 @@ pre {
 }
 .options li:hover {
       color: white;
+      cursor: pointer;
 }
 .active {
       padding: 2px 4px;
@@ -138,6 +142,7 @@ pre {
     flex-direction: column;
     gap: 1rem 0;
     padding: 1.5rem 2rem;
+    /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); */
 }
 .card h2 {
     font-size: 2rem;
@@ -157,12 +162,9 @@ pre {
 /*=====================================estilização elemento pai=====================================*/
 .flex {
     display: flex;
-
     margin: 1rem;
     padding: 1rem;
-    /* height: 20rem; */
     width: 30rem;
-
     border: 2px solid var(--primary-color);
 }
 .center {
