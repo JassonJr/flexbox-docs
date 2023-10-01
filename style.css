@@ -165,18 +165,19 @@ pre {
     margin: 1rem;
     padding: 1rem;
     width: 30rem;
-    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 7px rgba(255, 255, 255, 1);
+    font-family: var(--text-font);
 }
 .parent {
     align-self: center;
 }
-  /*=====================================estilização elemento filho=====================================*/
+/*=====================================estilização elemento filho=====================================*/
 .item {
     height: 50px;
     width: 50px;
-    background-color: var(--logo-color);
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid var(--background-color);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -203,14 +204,13 @@ pre {
     column-gap: 1rem;
 }
 .item-align {
-    background-color: var(--logo-color);
-    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid var(--background-color);
     text-align: center;
     border-radius: 5px;
     display: flex;
-    flex-wrap: wrap;
-    width: 100px;
-    padding: 0 10px;
+    padding: 5px;
+    /* width: 100px; */
 }
 .item-align:first-child {
     padding-top: 20px;
@@ -221,20 +221,18 @@ pre {
     height: 20rem;
 }
 .item-align-content {
-    background-color: var(--logo-color);
-    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid var(--background-color);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     width: 100px;
 }
 /*=====================================gap=====================================*/
 .row-gap {
     flex-direction: column;
     flex-wrap: wrap;
-    /* row-gap: 10px; */
 }
 .column-gap {
     flex-wrap: wrap;
@@ -270,7 +268,6 @@ footer a {
         text-indent: 1rem;
         font-size: 1.2rem;
         line-height: 1.5rem;
-        border: 2px solid black;
     }
     .flex {
         width: 20rem;
@@ -291,7 +288,7 @@ footer a {
         justify-content: center;
     }
     .flex {
-        width: 15rem;
+        width: 20rem;
     }
 }
 /*
