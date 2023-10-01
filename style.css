@@ -222,6 +222,7 @@ pre {
     border-radius: 5px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     width: 100px;
 }
