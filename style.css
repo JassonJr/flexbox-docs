@@ -146,6 +146,9 @@ pre {
     padding: 0 1rem;
     color: var(--primary-color);
     font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-align: justify;
+    text-indent: 1.5rem;
 }
 .examples { 
     display: flex;
@@ -157,7 +160,7 @@ pre {
 
     margin: 1rem;
     padding: 1rem;
-    height: 20rem;
+    /* height: 20rem; */
     width: 30rem;
 
     border: 2px solid var(--primary-color);
@@ -171,13 +174,11 @@ pre {
     width: 50px;
     background-color: var(--logo-color);
     color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.item:nth-child(even) {
-    height: 70px;
 }
 /*=====================================flex-flow=====================================*/
 .flex-flow {
@@ -205,6 +206,7 @@ pre {
 /*=====================================align-content=====================================*/
 .align-content {
     flex-wrap: wrap;
+    height: 20rem;
 }
 /*=====================================gap=====================================*/
 .row-gap {
@@ -215,7 +217,6 @@ pre {
 .column-gap {
     flex-wrap: wrap;
 }
-
 /*=====================================estilização footer=====================================*/
 footer {
     display: flex;
@@ -232,14 +233,22 @@ footer a {
     color: var(--logo-color);
     text-decoration: none;
 }
-
 /*=====================================Responsividade=====================================*/
 @media screen and (max-width: 800px) {
+    code {
+        font-size: 1rem;
+    }
     .header {
         flex-wrap: wrap;
     }
+    .card {
+        padding: 1rem 1rem;
+    }
     .card p {
-        text-align:justify;
+        text-indent: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        border: 2px solid black;
     }
     .flex {
         width: 20rem;
@@ -258,6 +267,9 @@ footer a {
 @media screen and (max-width: 650px) {
     .header {
         justify-content: center;
+    }
+    .flex {
+        width: 15rem;
     }
 }
 /*
