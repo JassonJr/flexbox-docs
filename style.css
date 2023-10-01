@@ -193,6 +193,10 @@ pre {
     flex-wrap: nowrap;
     white-space: nowrap;
 }
+/* container de demonstração flex-flow */
+.flow {
+    height: 15rem;
+}
 /*=====================================align-items=====================================*/
 .align-items {
     height: 20rem; 
