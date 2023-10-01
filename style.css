@@ -283,7 +283,14 @@ footer a {
         white-space: nowrap;
     }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 500px) {
+    .container {
+        margin: 0;
+        padding: 1rem 0;
+    }
+    summary {
+        padding-left: 10px ;
+    }
     .header {
         justify-content: center;
     }
