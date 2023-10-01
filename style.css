@@ -167,7 +167,7 @@ pre {
     width: 30rem;
     border: 2px solid var(--primary-color);
 }
-.center {
+.parent {
     align-self: center;
 }
   /*=====================================estilização elemento filho=====================================*/
@@ -194,21 +194,36 @@ pre {
     white-space: nowrap;
 }
 /*=====================================align-items=====================================*/
-.align-items { column-gap: 1rem;}
+.align-items {
+    height: 20rem; 
+    column-gap: 1rem;
+}
 .item-align {
     background-color: var(--logo-color);
     color: var(--primary-color);
+    text-align: center;
     border-radius: 5px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
     flex-wrap: wrap;
+    width: 100px;
+    padding: 0 10px;
+}
+.item-align:first-child {
+    padding-top: 20px;
 }
 /*=====================================align-content=====================================*/
 .align-content {
     flex-wrap: wrap;
     height: 20rem;
+}
+.item-align-content {
+    background-color: var(--logo-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100px;
 }
 /*=====================================gap=====================================*/
 .row-gap {
