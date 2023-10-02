@@ -13,3 +13,5 @@ A documentação deve ser **o mais detalhada e didática possível**, de forma q
 5. flex-wrap: (cada possível valor)
 6. flex-flow: (shorthand para flex-direction + flex-wrap)
 7. align-content: (cada possível valor)
+
+<a href="https://jassonjr.github.io/flexbox-docs/">Link para visualização da página</a>
