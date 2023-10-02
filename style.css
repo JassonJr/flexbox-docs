@@ -7,7 +7,7 @@
     --container-color: #151526;
     --background-color: #09091b;
     /* tipografia */
-    --title-font: Pixelify Sans;
+    --title-font: 'Press Start 2P';
     --text-font: roboto;
      font-size: 16px;
 }
@@ -34,15 +34,19 @@ body {
     flex-direction: column;
 }
 /*=====================================estilização tipografia inicial=====================================*/
-h1, h3, h4, h5, h6, summary {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--title-font);
     letter-spacing: 0.1rem;
 }
 h2, h3, h4 {
     color: var(--secondary-color);
 }
-p, h2, h4 {
+p, h4, summary {
     font-family: var(--text-font);
+}
+summary {
+    font-weight: bold;
+    font-size: 2rem;
 }
 /*=====================================estilização header principal=====================================*/
 .header {
