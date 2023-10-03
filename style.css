@@ -1,5 +1,6 @@
 /*=====================================configuração root=====================================*/
 :root {
+    scroll-behavior: smooth;
     /* paleta de cores */
     --primary-color: #fafafb;
     --secondary-color: #92a0a6;
@@ -41,12 +42,55 @@ h1, h2, h3, h4, h5, h6 {
 h2, h3, h4 {
     color: var(--secondary-color);
 }
-p, h4, summary {
+p, h4, .article-title {
     font-family: var(--text-font);
 }
-summary {
-    font-weight: bold;
-    font-size: 2rem;
+/*=====================================estilização sidebar=====================================*/
+/* Sidebar */
+
+.sidebar {
+	width: 220px;
+	height: 100vh;
+	padding: 20px;
+	background: #20273c;
+	position: fixed;
+	overflow: auto;
+}
+
+.sidebar h2 {
+	margin: 0px;
+	overflow: hidden;
+	line-height: 1;
+    font-size: 1rem;
+	color: var(--container-color);
+}
+
+.sidebar ul {
+	list-style: none;
+	margin: 10px 0px 30px 0px;
+	padding: 0px;
+}
+
+.sidebar a {
+    font-family: Roboto;
+    font-size: 1.2rem;
+	display: block;
+	padding: 5px 20px;
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+.sidebar li:nth-of-type(even) a {
+	background: #1c2338;
+}
+
+.sidebar li a.active, .sidebar li a:hover {
+	background: var(--container-color);
+	color: white;
+}
+/*=====================================estilização container principal=====================================*/
+.main {
+    padding-left: 220px;
 }
 /*=====================================estilização header principal=====================================*/
 .header {
@@ -58,7 +102,10 @@ summary {
     text-transform: uppercase;
     font-size: 2rem; /* 1rem = 16px */
     font-weight: bold;
+}
+.header a {
     color: var(--logo-color);
+    text-decoration: none;
 }
 .header h2 {
     color: white;
@@ -66,25 +113,38 @@ summary {
 .logo {
     color: blue;
 }
-/*=====================================estilização container principal=====================================*/
+/*=====================================estilização container de artigos=====================================*/
 .container {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;    
-    margin: 0 1.2rem;
-    padding: 1rem 1.1rem;
+    /* margin: 1.2rem 1.2rem 0 1.2rem; */
+    padding: 0 1.1rem;
     background-color: var(--container-color);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-/*=====================================estilização details=====================================*/
-summary {
-    color: var(--primary-color);
+article section:nth-child(even) {
+    background-color: var(--background-color);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+/*=====================================estilização descrição de artigos=====================================*/
+.description {
+    padding: 1rem 1.5rem;
+    background-color: #65b5d8;
+    color: var(--background-color);
+}
+.article-title {
+    font-weight: bold;
+    font-size: 2rem;
     margin-bottom: 1rem;
     font-size: 2rem;
 }
-details section:nth-child(even) {
-    background-color: var(--background-color);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+.description p {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    /* text-align: left; */
+    text-indent: 1.5rem;
 }
 /*=====================================estilização textos de códigos=====================================*/
 code {
@@ -258,6 +318,42 @@ footer a {
     text-decoration: none;
 }
 /*=====================================Responsividade=====================================*/
+@media screen and (max-width: 970px) {
+    .sidebar {
+        position: relative;
+        margin-top: 80px;
+        height: auto;
+        width: auto;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sidebar div {
+        flex: 1;
+        margin: 10px;
+    }
+    .sidebar a {
+        padding: 10px;
+    }
+    .header {
+        width: 100vw;
+        position: absolute;
+        top: 0;
+    }
+    .main {
+        padding-left: 0;
+    }
+    .options {
+        flex-direction: row;
+        overflow: scroll;
+        overflow-y: hidden;
+        padding-bottom: 20px;
+    }
+    .options ul {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+}
 @media screen and (max-width: 800px) {
     code {
         font-size: 1rem;
@@ -280,16 +376,6 @@ footer a {
     .flex {
         width: 20rem;
     }
-    .options {
-        flex-direction: row;
-        overflow: scroll;
-        overflow-y: hidden;
-        padding-bottom: 20px;
-    }
-    .options ul {
-        flex-wrap: nowrap;
-        white-space: nowrap;
-    }
 }
 @media screen and (max-width: 590px) {
     .header {
@@ -300,17 +386,29 @@ footer a {
 @media screen and (max-width: 500px) {
     .container {
         margin: 0;
-        padding: 1rem 0;
+        padding: 0 0;
     }
-    .card h2 {
+    .card h2, .article-title {
         text-align: center;
     }
-    summary {
+    .card p {
+        text-align: left;
+    }
+    .article-title {
         padding-left: 10px ;
     }
     .flex {
         width: 20rem;
     }
+}
+.container article:nth-of-type(2) div {
+    /* background-color: #5395fd; */
+    padding: 2rem 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
 }
 /*
 color: #09091b; body 
