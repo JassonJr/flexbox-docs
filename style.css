@@ -56,7 +56,7 @@ summary {
     padding: 1.5rem;
 
     text-transform: uppercase;
-    font-size: 3rem; /* 1rem = 16px */
+    font-size: 2rem; /* 1rem = 16px */
     font-weight: bold;
     color: var(--logo-color);
 }
@@ -149,7 +149,7 @@ pre {
     /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); */
 }
 .card h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .card p {
     padding: 0 1rem;
@@ -264,9 +264,13 @@ footer a {
     }
     .header {
         flex-wrap: wrap;
+        font-size: 1.5rem;
     }
     .card {
         padding: 1rem 1rem;
+    }
+    .card h2 {
+        font-size: 1.2rem;
     }
     .card p {
         text-indent: 1rem;
@@ -287,16 +291,22 @@ footer a {
         white-space: nowrap;
     }
 }
+@media screen and (max-width: 590px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 @media screen and (max-width: 500px) {
     .container {
         margin: 0;
         padding: 1rem 0;
     }
+    .card h2 {
+        text-align: center;
+    }
     summary {
         padding-left: 10px ;
-    }
-    .header {
-        justify-content: center;
     }
     .flex {
         width: 20rem;
