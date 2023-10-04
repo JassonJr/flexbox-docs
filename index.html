@@ -423,9 +423,9 @@
         const section = document.getElementsByClassName("section")
         
         //adicionando o active a opção pressionada
-        for (var j = 0; j < values.length; j++) {
+        for (let j = 0; j < values.length; j++) {
             values[j].addEventListener("click", function() {
-                for (var k = 0; k < values.length; k++) {
+                for (let k = 0; k < values.length; k++) {
                     values[k].classList.remove("active")
                 }
                 this.classList.toggle("active")
